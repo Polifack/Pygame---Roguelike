@@ -1,0 +1,35 @@
+# define some colors (R, G, B)
+WHITE = (255, 255, 255)
+BLACK = (0, 0, 0)
+DARKGREY = (40, 40, 40)
+LIGHTGREY = (100, 100, 100)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
+PINK = (168, 0, 64)
+CLEAR_PINK = (100, 0, 50)
+YELLOW = (255, 255, 0)
+BROWN = (128, 128, 64)
+BLUE = (0,0,200)
+
+BG_BLUE = (200, 200, 255)
+BG_RED = (255, 200, 200)
+BG_YELLOW = (255, 255, 200)
+
+# game settings
+SCALE_FACTOR = 1.5
+WIDTH = int(32*18*SCALE_FACTOR) # 16 * 64 or 32 * 32 or 64 * 16
+HEIGHT = int(32*20*SCALE_FACTOR)  # 16 * 48 or 32 * 24 or 64 * 12
+FPS = 60
+TITLE = "EL PALO"
+BGCOLOR = LIGHTGREY
+
+TILESIZE = int(32*SCALE_FACTOR)
+SPRITESIZE = 48
+
+GRIDWIDTH = WIDTH / TILESIZE
+GRIDHEIGHT = HEIGHT / TILESIZE
+NROOMS = 2 # This number of rooms does not count with the boss room
+NFLOORS = 3
+ROOMSIZE = 16
+
+INITIAL_MAX_TIME = 50

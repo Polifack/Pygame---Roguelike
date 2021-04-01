@@ -1,0 +1,2 @@
+Speed can increase infinitely if we are dodging
+(it could be easy to fix but i think it is fun)
