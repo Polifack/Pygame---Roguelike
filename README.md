@@ -111,7 +111,7 @@ Jefe de piso: Director de cada uno de los pisos. Tiene bastante vida
 debido a las mutaciones genéticas sufridas. Ataca con un arma rápida y
 contundente.
 ```
-## 1.4. GAMEPLAY
+### 1.4. GAMEPLAY
 
 - En la carpeta documentación se encuentra un archivo mp4 de una run
     completa del juego.
@@ -119,7 +119,7 @@ contundente.
 
 ## 2. DETALLES DE IMPLEMENTACION
 
-## 2.1. ESTRUCTURA DEL CODIGO
+### 2.1. ESTRUCTURA DEL CODIGO
 
 - game.py: Clase principal del juego. Contiene las funciones de inicialización
     de datos, limpieza de datos e implementaciones de las pantallas
@@ -130,7 +130,8 @@ contundente.
        o playgame_screen: pantalla de juego
        o victory_screen: pantalla de victoria, tras terminar el ultimo piso
        o runaway_screen: pantalla de huida, tras terminar un piso y huir
-- **manager** .py: Archivo de los managers del juego. Contiene los managers de
+
+- manager.py: Archivo de los managers del juego. Contiene los managers de
     niveles, de sonido y de HUD.
        o FloorManager: se encarga de administrar los pisos que se
           muestran por pantalla. Contiene referencias a todos los mapas
@@ -148,31 +149,32 @@ contundente.
           mediante abstracción (teniendo por ejemplo hud_gameover,
           hud_starscreen que implementen hud_abstract) y una
           implementación distinta de show_hud() para cada una.
-- **Animation** .py: Clase que define una animación. Esta clase es totalmente
+
+- Animation.py: Clase que define una animación. Esta clase es totalmente
     auxiliar y su único objetivo es facilitar el workflow con animaciones.
     Permite dada una Sprite sheet y una velocidad de frame crear una
     animación de forma fácil. Sus función mas importante es get_frame(), que
     devuelve la imagen correspondiente al frame de animación.
-- **Camera** .py: Clase que define la “cámara” del juego. Le llamamos cámara
+
+- Camera.py: Clase que define la “cámara” del juego. Le llamamos cámara
     por comodidad, pero lo que hace es desplazar todos los gameobjects
     relativos a la posición del jugador. La cámara tendrá indicado un mínimo y
     un máximo de pantalla para mantener centrada la acción.
-- **Settings** .py: Archivo que contiene la configuración de la aplicación, con
+
+- Settings.py: Archivo que contiene la configuración de la aplicación, con
     detalles tales como el numero de habitaciones por piso, el tamaño de
     ventana o el numero de pisos por partida.
-- **Data** .py: Archivo que contiene las clases de datos de las entidades del
+
+- Data.py: Archivo que contiene las clases de datos de las entidades del
     juego y las armas. También contiene la lógica de la vida de los personajes y
     las funciones para recibir daño teniendo en cuenta el tiempo de
     invulnerabilidad. El principal objetivo de esta clase es separar lógica de
     datos para su más fácil manejo. Mirado con retrospectiva hubiera sido
-
-
-```
-cómodo que esta clase recogiese los datos de otro archivo aparte en vez
-de tener los números hardcodeados, así como de también encargarse de
-todos los datos de los sprites a modo de manager de recursos.
-```
-- **Sprites** .py: Archivo que contiene los sprites de los elementos del juego. Las
+    cómodo que esta clase recogiese los datos de otro archivo aparte en vez
+    de tener los números hardcodeados, así como de también encargarse de
+    todos los datos de los sprites a modo de manager de recursos.
+    
+- Sprites.py: Archivo que contiene los sprites de los elementos del juego. Las
     relaciones de estas clases serán explicadas más adelante. Las clases son:
        o Player
        o FirstFloorEnemy, SecondFloorEnemy, ThirdFloorEnemy,
@@ -181,21 +183,25 @@ todos los datos de los sprites a modo de manager de recursos.
        o Background
        o Door, Rope, Wall, Warp
        o Money
-- **Tilemap** .py: Archivo que se encarga de todo lo relativo a la creación
+- Tilemap.py: Archivo que se encarga de todo lo relativo a la creación
     procedural de mapas y niveles. Su funcionamiento será explicado más
     adelante. Contiene las siguientes clases:
-       o **Floor** : Clase decoración que contiene un piso entero y sus
+       o Floor : Clase decoración que contiene un piso entero y sus
           funciones para generarlo y borrarlo
-       o **Map** : Clase que define el piso mediante la carga de habitaciones
+       o Map : Clase que define el piso mediante la carga de habitaciones
           desde un archivo, la elección aleatoria de estas y la generación de
           objetos
-       o **Room** : Clase auxiliar usada para contener los datos de cada una de
+       o Room : Clase auxiliar usada para contener los datos de cada una de
           las habitaciones y facilitar su borrado posterior.
-       o **BossRoom** : Clase auxiliar usada para contener los datos de una
+       o BossRoom : Clase auxiliar usada para contener los datos de una
           habitación de jefe y facilitar su borrado posterior. Visto en
           retrospectiva pudo haberse diseñado como una extensión de
           Room o que ambas fuesen implementaciones de AbstractRoom.
-**2.2. ASPECTOS RELEVANTES**
+
+
+### 2.2. ASPECTOS RELEVANTES
+
+
 - La clase principal del juego es game, que se le pasa como referencia a
 todos los sprites a la hora de inicializarse para que estos puedan acceder a
 las funciones de estado y a los managers.
@@ -217,7 +223,6 @@ codificados basándose en caracteres, que luego son parseados por la clase
 de tilemap.py para generar los gameobjects correspondientes.
 o Números: Paredes
 o E: Enemigo
-
 
 - Los diferentes pisos del juego contienen diferentes enemigos que también
     son decididos a la hora de generar en tilemap.py. También esta
@@ -268,7 +273,6 @@ o E: Enemigo
           al inicio del dodge durante un determinado tiempo. Es
           invulnerable.
 
-
 - Las armas del juego están almacenadas en la clase gun, desde la que se
     decide la posición en la esta mirando el arma a la hora de renderizarla. Las
     armas disparan balas, definidas en la clase bullet. Las balas salen con un
@@ -289,7 +293,11 @@ o E: Enemigo
     procedural probablemente sea el apartado más destacado del juego.
 - La arquitectura de datos/lógica hace muy sencillo añadir mas elementos al
     juego
-**2.3. ASSETS**
+
+
+### 2.3. ASSETS
+
+
 - Musica:
 o **Alarm** : Sonido de alarma del juego de acción/sigilo Payday 2
 o **Defeat** : Sonido de derrota del juego de acción/estrategia
