@@ -2,13 +2,11 @@
 
 ## MEMORIA DE IMPLEMENTACION EN 2D CON PYGAME
 
-```
 Diego Roca Rodriguez
-```
 
 ## 1. DESCRIPCION DEL JUEGO
 
-## 1.1. HISTORIA
+### 1.1. HISTORIA
 
 - Nuestro protagonista, Jaro, se adentra en las oficinas centrales del banco
     mas malvado del planeta. Allí se encuentra que la forma del banco cambia
@@ -20,7 +18,11 @@ Diego Roca Rodriguez
 - Nuestro protagonista tendrá un tiempo limitado para permanecer en el
     edificio, dictaminado por el tiempo que tarden en llegar los policías tras
     que hayan sonado las alarmas
-**1.2. JUGABILIDAD**
+
+
+### 1.2. JUGABILIDAD
+
+
 - El juego consiste en un topdown shooter roguelite como the binding of
 Isaac o enter the gungeon. Podremos recoger dinero, disparar, esquivar y
 explorar niveles generados proceduralmente.
@@ -45,7 +47,11 @@ conseguido en más tiempo para el siguiente asalto o continuar.
 - La muerte, como en la vida misma (Y los arcades clásicos), es permanente.
 El jugador deberá pensar muy bien lo de continuar a un nuevo piso o
 perder todo su progreso.
-**1.3. MANUAL DE USUARIO**
+
+
+### 1.3. MANUAL DE USUARIO
+
+
 - Controles:
 o Movimiento del jugador: WASD. Movimiento en 8 Direcciones.
 o Apuntado: Flechas de dirección, Disparo en 4 Direcciones
