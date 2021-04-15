@@ -2,11 +2,10 @@
 
 ### 1.1. HISTORIA
 
-- Nuestro protagonista, Jaro, se adentra en las oficinas centrales del banco
-    mas malvado del planeta. Allí se encuentra que la forma del banco cambia
-    cada vez que entra y que todos los trabajadores han sido convertidos en
+- Nuestro protagonista se adentra en las oficinas centrales del banco, que cambian
+    cada vez que entra y todos los trabajadores han sido convertidos en
     esclavos agresivos.
-- Jaro deberá recorrer los 3 pisos del banco derrotando los enemigos y
+- El personaje deberá recorrer los 3 pisos del banco derrotando los enemigos y
     recogiendo todo el dinero posible hasta llegar al ultimo piso donde se
     enfrentará con el director
 - Nuestro protagonista tendrá un tiempo limitado para permanecer en el
@@ -76,12 +75,12 @@ terminarla con el dinero recaudado
 9) Warp, nos permite cambiar de piso una vez derrotado al jefe
 10) Dinero, el dinero es dinero
 ```
-- Pisos: El Palo tiene 3 pisos, identificados por distintos colores (Azul,
+- Pisos: El Banco tiene 3 pisos, identificados por distintos colores (Azul,
     Amarillo y Rojo). Estos colores indican su dificultad.
 - Personajes:
 
 ```
-El Jaro: Protagonista del juego, el avatar del jugador. Tras una infancia
+El Prota: Protagonista del juego, el avatar del jugador. Tras una infancia
 difícil decide atracar un banco para por fin sacarse a él y a los suyos de la
 pobreza.
 ```
